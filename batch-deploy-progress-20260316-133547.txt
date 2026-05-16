@@ -1,0 +1,8 @@
+smartsocket-spring-boot-starter:3.0.x:FAIL
+smartsocket-spring-boot-starter:3.1.x:FAIL
+smartsocket-spring-boot-starter:3.2.x:FAIL
+smartsocket-spring-boot-starter:3.3.x:FAIL
+smartsocket-spring-boot-starter:3.4.x:FAIL
+smartsocket-spring-boot-starter:3.5.x:FAIL
+smartsocket-spring-boot-starter:4.0.x:FAIL
+smartsocket-spring-boot-starter:master:FAIL
