@@ -20,6 +20,7 @@ import java.nio.ByteBuffer;
 import org.smartboot.socket.Protocol;
 import org.smartboot.socket.transport.AioSession;
 
+/**\n * Auto-configuration for StringProtocol.\n *\n * @author [@Loong Wan](https://github.com/loong10k)\n * @since 1.0.0\n */
 public class StringProtocol implements Protocol<String> {
 
 	@Override
