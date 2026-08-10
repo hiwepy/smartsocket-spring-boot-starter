@@ -13,21 +13,21 @@ import org.smartboot.socket.spring.boot.hooks.AioQuickClientShutdownHook;
 import org.smartboot.socket.spring.boot.hooks.AioQuickServerShutdownHook;
 import org.smartboot.socket.transport.AioQuickClient;
 import org.smartboot.socket.transport.AioQuickServer;
-import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * 
+ * Auto-configuration for SmartSocket AIO server and client.
+ *
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
  */
 @Configuration
 @ConditionalOnClass(MessageProcessor.class)
 @ConditionalOnProperty(prefix = SmartSocketServerProperties.PREFIX, value = "enabled", havingValue = "true")
 @EnableConfigurationProperties({ SmartSocketServerProperties.class, SmartSocketClientProperties.class })
-@AutoConfigureBefore(DataSourceAutoConfiguration.class)
 public class SmartSocketAutoConfiguration {
 
 	public Logger logger = LoggerFactory.getLogger(getClass());

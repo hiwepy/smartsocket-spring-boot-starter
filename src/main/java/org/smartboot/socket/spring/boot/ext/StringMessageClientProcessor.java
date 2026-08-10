@@ -19,7 +19,7 @@ import org.smartboot.socket.MessageProcessor;
 import org.smartboot.socket.StateMachineEnum;
 import org.smartboot.socket.transport.AioSession;
 
-/**\n * Auto-configuration for StringMessageClientProcessor.\n *\n * @author [@Loong Wan](https://github.com/loong10k)\n * @since 1.0.0\n */
+/**\n * Auto-configuration for StringMessageClientProcessor.\n *\n * @author <a href="https://github.com/loong10k">Loong Wan</a>\n * @since 1.0.0\n */
 public class StringMessageClientProcessor implements MessageProcessor<String> {
 	
 	private AioSession<String> session;
