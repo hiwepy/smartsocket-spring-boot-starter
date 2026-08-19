@@ -25,11 +25,22 @@ public class StringMessageClientProcessor implements MessageProcessor<String> {
 	private AioSession<String> session;
 
 	@Override
+    /**
+     * <p>Process.</p>
+     * @param session
+     * @param msg
+     */
 	public void process(AioSession<String> session, String msg) {
 		System.out.println("接受到服务端响应数据：" + msg);
 	}
 
 	@Override
+    /**
+     * <p>State event.</p>
+     * @param session
+     * @param stateMachineEnum
+     * @param throwable
+     */
 	public void stateEvent(AioSession<String> session, StateMachineEnum stateMachineEnum, Throwable throwable) {
 		switch (stateMachineEnum) {
 		case NEW_SESSION:
@@ -41,6 +52,10 @@ public class StringMessageClientProcessor implements MessageProcessor<String> {
 
 	}
 
+    /**
+     * <p>Returns the session.</p>
+     * @return the get session
+     */
 	public AioSession<String> getSession() {
 		return session;
 	}

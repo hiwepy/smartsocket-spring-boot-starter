@@ -35,6 +35,13 @@ public class FixedLengthProtocol implements Protocol<String> {
     private static final int INT_BYTES = 4;//int类型的字节长度
 
     @Override
+    /**
+     * <p>Decode.</p>
+     * @param readBuffer
+     * @param session
+     * @param eof
+     * @return the decode
+     */
     public String decode(ByteBuffer readBuffer, AioSession<String> session, boolean eof) {
         if (session.getAttachment() == null && readBuffer.remaining() < INT_BYTES) {
         	//首次解码不足四字节，无法知晓消息长度
@@ -61,6 +68,12 @@ public class FixedLengthProtocol implements Protocol<String> {
     }
 
     @Override
+    /**
+     * <p>Encode.</p>
+     * @param msg
+     * @param session
+     * @return the encode
+     */
     public ByteBuffer encode(String msg, AioSession<String> session) {
         byte[] bytes = msg.getBytes();
         ByteBuffer buffer = ByteBuffer.allocate(INT_BYTES + bytes.length);

@@ -36,6 +36,13 @@ public class DelimiterProtocol implements Protocol<String> {
     private static final byte[] DELIMITER_BYTES = new byte[]{'\r', '\n'};
 
     @Override
+    /**
+     * <p>Decode.</p>
+     * @param buffer
+     * @param session
+     * @param eof
+     * @return the decode
+     */
     public String decode(ByteBuffer buffer, AioSession<String> session, boolean eof) {
         DelimiterFrameDecoder delimiterFrameDecoder;
         if (session.getAttachment() == null) {//构造指定结束符的临时缓冲区
@@ -58,6 +65,12 @@ public class DelimiterProtocol implements Protocol<String> {
     }
 
     @Override
+    /**
+     * <p>Encode.</p>
+     * @param msg
+     * @param session
+     * @return the encode
+     */
     public ByteBuffer encode(String msg, AioSession<String> session) {
         byte[] bytes = msg.getBytes();
         ByteBuffer buffer = ByteBuffer.allocate(bytes.length + DELIMITER_BYTES.length);

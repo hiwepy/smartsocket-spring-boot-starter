@@ -25,6 +25,11 @@ import org.smartboot.socket.transport.AioSession;
 public class StringMessageServerProcessor implements MessageProcessor<String> {
 
 	@Override
+    /**
+     * <p>Process.</p>
+     * @param session
+     * @param msg
+     */
 	public void process(AioSession<String> session, String msg) {
 		String respMsg = msg + 1;
 		System.out.println("接受到客户端数据：" + msg + " ,响应数据:" + (respMsg));
@@ -36,6 +41,12 @@ public class StringMessageServerProcessor implements MessageProcessor<String> {
 	}
 
 	@Override
+    /**
+     * <p>State event.</p>
+     * @param session
+     * @param stateMachineEnum
+     * @param throwable
+     */
 	public void stateEvent(AioSession<String> session, StateMachineEnum stateMachineEnum, Throwable throwable) {
 		
 	}

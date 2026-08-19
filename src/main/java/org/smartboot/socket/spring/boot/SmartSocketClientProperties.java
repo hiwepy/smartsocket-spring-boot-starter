@@ -35,42 +35,82 @@ public class SmartSocketClientProperties {
 
 	private boolean directBuffer;
 
+    /**
+     * <p>Returns the write queue size.</p>
+     * @return the get write queue size
+     */
 	public int getWriteQueueSize() {
 		return writeQueueSize;
 	}
 
+    /**
+     * <p>Sets the write queue size.</p>
+     * @param writeQueueSize
+     */
 	public void setWriteQueueSize(int writeQueueSize) {
 		this.writeQueueSize = writeQueueSize;
 	}
 
+    /**
+     * <p>Returns the read buffer size.</p>
+     * @return the get read buffer size
+     */
 	public int getReadBufferSize() {
 		return readBufferSize;
 	}
 
+    /**
+     * <p>Sets the read buffer size.</p>
+     * @param readBufferSize
+     */
 	public void setReadBufferSize(int readBufferSize) {
 		this.readBufferSize = readBufferSize;
 	}
 
+    /**
+     * <p>Returns the host.</p>
+     * @return the get host
+     */
 	public String getHost() {
 		return host;
 	}
 
+    /**
+     * <p>Sets the host.</p>
+     * @param host
+     */
 	public void setHost(String host) {
 		this.host = host;
 	}
 
+    /**
+     * <p>Returns the port.</p>
+     * @return the get port
+     */
 	public int getPort() {
 		return port;
 	}
 
+    /**
+     * <p>Sets the port.</p>
+     * @param port
+     */
 	public void setPort(int port) {
 		this.port = port;
 	}
 
+    /**
+     * <p>Checks if direct buffer.</p>
+     * @return the is direct buffer
+     */
 	public boolean isDirectBuffer() {
 		return directBuffer;
 	}
 
+    /**
+     * <p>Sets the direct buffer.</p>
+     * @param directBuffer
+     */
 	public void setDirectBuffer(boolean directBuffer) {
 		this.directBuffer = directBuffer;
 	}

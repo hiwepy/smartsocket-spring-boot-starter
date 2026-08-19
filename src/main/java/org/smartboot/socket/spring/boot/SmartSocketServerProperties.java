@@ -26,14 +26,28 @@ public class SmartSocketServerProperties {
 			this.protocol = protocol;
 		}
 
+    /**
+     * <p>Returns the get.</p>
+     * @return the get
+     */
 		public int get() {
 			return protocol;
 		}
 
+    /**
+     * <p>Equals.</p>
+     * @param protocol
+     * @return the equals
+     */
 		public boolean equals(Protocol protocol) {
 			return this.compareTo(protocol) == 0;
 		}
 
+    /**
+     * <p>Equals.</p>
+     * @param protocol
+     * @return the equals
+     */
 		public boolean equals(int protocol) {
 			return this.compareTo(Protocol.valueOfIgnoreCase(protocol)) == 0;
 		}
@@ -118,20 +132,36 @@ public class SmartSocketServerProperties {
 		this.threadNum = threadNum;
 	}
 
+    /**
+     * <p>Returns the write queue size.</p>
+     * @return the get write queue size
+     */
 	public int getWriteQueueSize() {
 		return writeQueueSize;
 	}
 
+    /**
+     * <p>Sets the write queue size.</p>
+     * @param writeQueueSize
+     */
 	public void setWriteQueueSize(int writeQueueSize) {
 		this.writeQueueSize = writeQueueSize;
 		flowLimitLine = (int) (writeQueueSize * limitRate);
 		releaseLine = (int) (writeQueueSize * releaseRate);
 	}
 
+    /**
+     * <p>Returns the read buffer size.</p>
+     * @return the get read buffer size
+     */
 	public int getReadBufferSize() {
 		return readBufferSize;
 	}
 
+    /**
+     * <p>Sets the read buffer size.</p>
+     * @param readBufferSize
+     */
 	public void setReadBufferSize(int readBufferSize) {
 		this.readBufferSize = readBufferSize;
 	}
@@ -144,18 +174,34 @@ public class SmartSocketServerProperties {
 		return releaseLine;
 	}
 
+    /**
+     * <p>Checks if banner enabled.</p>
+     * @return the is banner enabled
+     */
 	public boolean isBannerEnabled() {
 		return bannerEnabled;
 	}
 
+    /**
+     * <p>Sets the banner enabled.</p>
+     * @param bannerEnabled
+     */
 	public void setBannerEnabled(boolean bannerEnabled) {
 		this.bannerEnabled = bannerEnabled;
 	}
 
+    /**
+     * <p>Checks if direct buffer.</p>
+     * @return the is direct buffer
+     */
 	public boolean isDirectBuffer() {
 		return directBuffer;
 	}
 
+    /**
+     * <p>Sets the direct buffer.</p>
+     * @param directBuffer
+     */
 	public void setDirectBuffer(boolean directBuffer) {
 		this.directBuffer = directBuffer;
 	}

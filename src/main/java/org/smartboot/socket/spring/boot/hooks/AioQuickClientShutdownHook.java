@@ -14,6 +14,9 @@ public class AioQuickClientShutdownHook extends Thread{
 	}
 
 	@Override
+    /**
+     * <p>Run.</p>
+     */
 	public void run() {
 		client.shutdown();
 	}

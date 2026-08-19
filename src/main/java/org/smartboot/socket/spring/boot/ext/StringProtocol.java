@@ -24,11 +24,24 @@ import org.smartboot.socket.transport.AioSession;
 public class StringProtocol implements Protocol<String> {
 
 	@Override
+    /**
+     * <p>Decode.</p>
+     * @param buffer
+     * @param session
+     * @param eof
+     * @return the decode
+     */
 	public String decode(ByteBuffer buffer, AioSession<String> session, boolean eof) {
 		return buffer.asCharBuffer().toString();
 	}
 	
 	@Override
+    /**
+     * <p>Encode.</p>
+     * @param msg
+     * @param session
+     * @return the encode
+     */
 	public ByteBuffer encode(String msg, AioSession<String> session) {
 
 		ByteBuffer buffer = ByteBuffer.allocate(msg.length());
