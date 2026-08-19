@@ -3,6 +3,12 @@ package org.smartboot.socket.spring.boot;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(SmartSocketClientProperties.PREFIX)
+/**
+ * <p>Configuration properties for SmartSocketClient.</p>
+ *
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class SmartSocketClientProperties {
 	
 	public static final String PREFIX = "h2.server";

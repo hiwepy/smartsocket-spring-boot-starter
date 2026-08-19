@@ -5,6 +5,12 @@ import java.util.NoSuchElementException;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(SmartSocketServerProperties.PREFIX)
+/**
+ * <p>Configuration properties for SmartSocketServer.</p>
+ *
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class SmartSocketServerProperties {
 	
 	public static final String PREFIX = "h2.server";

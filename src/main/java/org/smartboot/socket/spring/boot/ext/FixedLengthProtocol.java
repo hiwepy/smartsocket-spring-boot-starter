@@ -24,6 +24,12 @@ import org.smartboot.socket.transport.AioSession;
 /**
  * http://smartsocket.mydoc.io/?t=281156
  */
+/**
+ * <p>FixedLengthProtocol implementation.</p>
+ *
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class FixedLengthProtocol implements Protocol<String> {
 	
     private static final int INT_BYTES = 4;//int类型的字节长度
